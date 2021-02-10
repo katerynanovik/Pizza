@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Pizza</title>
+
+    <!-- Bootsrap CSS -->
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <!-- LESS основний файл -->
+    <link rel="stylesheet/less" type="text/css" href="assets/less/main.less" />
+    <link rel="stylesheet" href="assets/less/main.css">
+    
+    
+    <!-- LESS JavaScript компілятор -->
+   <!--  <script src="C:\Users\senat\Desktop\html\Laba4\JS-Pizza-master\JS-Pizza-master\Frontend\www\assets\js"></script> -->
+
+</head>
+
+<body>
+ 
+    <header>
+
+        <div class="header">
+
+            <div class= "pizzaKMAFlag">
+              <img src="C:\Users\senat\Desktop\html\Laba4\JS-Pizza-master\JS-Pizza-master\Frontend\www\assets\images\discount.svg" class="flagTop">
+              <p class="pizza">PIZZA</p>
+              <p class="KMA">KMA</p>
+            </div> 
+
+            <div class="firstLine">
+                <span class="number">(044) 222 5 222</span>
+                <span class="twenty47">24 години/ 7 днів на тиждень</span> 
+                <span class="freeDelivery">Безкоштовна доставка піци</span>
+                <button class="signIn">Ввійти</button>    
+            </div>
+
+            <div class="secondLine"><p class="piza">Піца</p></div>
+
+       </div> 
+    </header>
+
+
+
+    
+    
+
+<div id="cart"></div>
+<div class="container">
+
+    <div class="sidePanel">
+        
+    </div>
+
+    <div class="afterHeader">
+        <div class="allPizzas"><span>Усі піци</span><span class="amountOfPizzas">8</span></div>
+        <div class="typesOfPizzas">
+            <button class="type">Усі</button>
+            <button class="type">М'ясні</button>
+            <button class="type">З ананасами</button>
+            <button class="type">З грибами</button>
+            <button class="type">З морепродуктами</button>
+            <button class="type">Вега</button>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-4">
+        <div class="thumbnail pizza-card">
+            <img src="assets/images/pizza_7.jpg">
+
+            <div class="caption"><h3 class="title" data-new='Нова'>Імпреза</h3>
+                <h6 class="greyType">М'ясна піца</h6>
+                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                
+                <div class="firstColumn">
+                    <div class="size"><img src="C:\Users\senat\Desktop\html\Laba4\JS-Pizza-master\JS-Pizza-master\Frontend\www\assets\images\size-icon.svg" class="imgSize">30</div>
+                    <div class="weight"><img src="C:\Users\senat\Desktop\html\Laba4\JS-Pizza-master\JS-Pizza-master\Frontend\www\assets\images\weight.svg" class="imgWeight">370</div>
+                    <div class="price-primary">99</div>
+                    <div class="grn">грн.</div>   
+                    <div href="#" class="btnbtn-primary">Купити</div>
+                </div>
+
+                <div class="secondColumn">
+                    <div class="size"><img src="C:\Users\senat\Desktop\html\Laba4\JS-Pizza-master\JS-Pizza-master\Frontend\www\assets\images\size-icon.svg" class="imgSize">40</div>
+                    <div class="weight"><img src="C:\Users\senat\Desktop\html\Laba4\JS-Pizza-master\JS-Pizza-master\Frontend\www\assets\images\weight.svg" class="imgWeight">660</div>
+                        <div class="price-default">169</div>
+                        <div class="grn">грн.</div>
+                        <div href="#" class="btnbtn-default">Купити</div>
+                </div> 
+                    
+            </div>
+        </div>
+    </div>
+
+
+
+        <div class="col-sm-6 col-md-4">
+
+            <div class="thumbnail pizza-card">                
+                <img src="assets/images/pizza_2.jpg">
+
+                <div class="caption"><h3 class="title" data-popular='Популярна'>BBQ</h3>
+                    <h6 class="greyType">М'ясна піца</h6>
+                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+
+                    <div class="firstColumn">
+                        <div class="size"><img src="C:\Users\senat\Desktop\html\Laba4\JS-Pizza-master\JS-Pizza-master\Frontend\www\assets\images\size-icon.svg" class="imgSize">30</div>
+                        <div class="weight"><img src="C:\Users\senat\Desktop\html\Laba4\JS-Pizza-master\JS-Pizza-master\Frontend\www\assets\images\weight.svg" class="imgWeight">370</div>
+                        <div class="price-primary">99</div>
+                        <div class="grn">грн.</div>   
+                        <div href="#" class="btnbtn-primary">Купити</div>
+                    </div>
+    
+                    <div class="secondColumn">
+                        <div class="size"><img src="C:\Users\senat\Desktop\html\Laba4\JS-Pizza-master\JS-Pizza-master\Frontend\www\assets\images\size-icon.svg" class="imgSize">40</div>
+                        <div class="weight"><img src="C:\Users\senat\Desktop\html\Laba4\JS-Pizza-master\JS-Pizza-master\Frontend\www\assets\images\weight.svg" class="imgWeight">660</div>
+                            <div class="price-default">169</div>
+                            <div class="grn">грн.</div>
+                            <div href="#" class="btnbtn-default">Купити</div>
+                    </div> 
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail pizza-card">
+                <img src="assets/images/pizza_3.jpg">
+
+                <div class="caption"><h3 class="title">Маргарита</h3>
+                    <h6 class="greyType">М'ясна піца</h6>
+                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+
+                    <div class="firstColumn">
+                        <div class="size"><img src="C:\Users\senat\Desktop\html\Laba4\JS-Pizza-master\JS-Pizza-master\Frontend\www\assets\images\size-icon.svg" class="imgSize">30</div>
+                        <div class="weight"><img src="C:\Users\senat\Desktop\html\Laba4\JS-Pizza-master\JS-Pizza-master\Frontend\www\assets\images\weight.svg" class="imgWeight">370</div>
+                        <div class="price-primary">99</div>
+                        <div class="grn">грн.</div>   
+                        <div href="#" class="btnbtn-primary">Купити</div>
+                    </div>
+    
+                    <div class="secondColumn">
+                        <div class="size"><img src="C:\Users\senat\Desktop\html\Laba4\JS-Pizza-master\JS-Pizza-master\Frontend\www\assets\images\size-icon.svg" class="imgSize">40</div>
+                        <div class="weight"><img src="C:\Users\senat\Desktop\html\Laba4\JS-Pizza-master\JS-Pizza-master\Frontend\www\assets\images\weight.svg" class="imgWeight">660</div>
+                            <div class="price-default">169</div>
+                            <div class="grn">грн.</div>
+                            <div href="#" class="btnbtn-default">Купити</div>
+                    </div> 
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail pizza-card">
+                <img src="assets/images/pizza_4.jpg">
+
+                <div class="caption"><h3 class="title">Россо Густо</h3>
+                    <h6 class="greyType">Піца з морепродуктами</h6>
+                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+
+                    <div class="firstColumn">
+                        <div class="size"><img src="C:\Users\senat\Desktop\html\Laba4\JS-Pizza-master\JS-Pizza-master\Frontend\www\assets\images\size-icon.svg" class="imgSize">30</div>
+                        <div class="weight"><img src="C:\Users\senat\Desktop\html\Laba4\JS-Pizza-master\JS-Pizza-master\Frontend\www\assets\images\weight.svg" class="imgWeight">370</div>
+                        <div class="price-primary">99</div>
+                        <div class="grn">грн.</div>   
+                        <div href="#" class="btnbtn-primary">Купити</div>
+                    </div>
+    
+                    <div class="secondColumn">
+                        <div class="size"><img src="C:\Users\senat\Desktop\html\Laba4\JS-Pizza-master\JS-Pizza-master\Frontend\www\assets\images\size-icon.svg" class="imgSize">40</div>
+                        <div class="weight"><img src="C:\Users\senat\Desktop\html\Laba4\JS-Pizza-master\JS-Pizza-master\Frontend\www\assets\images\weight.svg" class="imgWeight">660</div>
+                            <div class="price-default">169</div>
+                            <div class="grn">грн.</div>
+                            <div href="#" class="btnbtn-default">Купити</div>
+                    </div> 
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail pizza-card">
+                <img src="assets/images/pizza_5.jpg">
+
+                <div class="caption"><h3 class="title">Сициліано</h3>
+                    <h6 class="greyType">Піца з морепродуктами</h6>
+                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+
+                    <div class="firstColumn">
+                        <div class="size"><img src="C:\Users\senat\Desktop\html\Laba4\JS-Pizza-master\JS-Pizza-master\Frontend\www\assets\images\size-icon.svg" class="imgSize">30</div>
+                        <div class="weight"><img src="C:\Users\senat\Desktop\html\Laba4\JS-Pizza-master\JS-Pizza-master\Frontend\www\assets\images\weight.svg" class="imgWeight">370</div>
+                        <div class="price-primary">99</div>
+                        <div class="grn">грн.</div>   
+                        <div href="#" class="btnbtn-primary">Купити</div>
+                    </div>
+    
+                    <div class="secondColumn">
+                        <div class="size"><img src="C:\Users\senat\Desktop\html\Laba4\JS-Pizza-master\JS-Pizza-master\Frontend\www\assets\images\size-icon.svg" class="imgSize">40</div>
+                        <div class="weight"><img src="C:\Users\senat\Desktop\html\Laba4\JS-Pizza-master\JS-Pizza-master\Frontend\www\assets\images\weight.svg" class="imgWeight">660</div>
+                            <div class="price-default">169</div>
+                            <div class="grn">грн.</div>
+                            <div href="#" class="btnbtn-default">Купити</div>
+                    </div> 
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail pizza-card">
+                <img src="assets/images/pizza_6.jpg">
+
+                <div class="caption"><h3 class="title">Мікс смаків</h3>
+                    <h6 class="greyType">Піца з морепродуктами</h6>
+                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+
+                    <div class="firstColumn">
+                        <div class="size"><img src="C:\Users\senat\Desktop\html\Laba4\JS-Pizza-master\JS-Pizza-master\Frontend\www\assets\images\size-icon.svg" class="imgSize">30</div>
+                        <div class="weight"><img src="C:\Users\senat\Desktop\html\Laba4\JS-Pizza-master\JS-Pizza-master\Frontend\www\assets\images\weight.svg" class="imgWeight">370</div>
+                        <div class="price-primary">99</div>
+                        <div class="grn">грн.</div>   
+                        <div href="#" class="btnbtn-primary">Купити</div>
+                    </div>
+    
+                    <div class="secondColumn">
+                        <div class="size"><img src="C:\Users\senat\Desktop\html\Laba4\JS-Pizza-master\JS-Pizza-master\Frontend\www\assets\images\size-icon.svg" class="imgSize">40</div>
+                        <div class="weight"><img src="C:\Users\senat\Desktop\html\Laba4\JS-Pizza-master\JS-Pizza-master\Frontend\www\assets\images\weight.svg" class="imgWeight">660</div>
+                            <div class="price-default">169</div>
+                            <div class="grn">грн.</div>
+                            <div href="#" class="btnbtn-default">Купити</div>
+                    </div> 
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row" id="pizza_list">
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail pizza-card">
+                    <img src="assets/images/pizza_1.jpg">
+    
+                    <div class="caption"><h3 class="title">Міксовий поло</h3>
+                        <h6 class="greyType">М'ясна піца</h6>
+                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+    
+                        <div class="firstColumn">
+                            <div class="size"><img src="C:\Users\senat\Desktop\html\Laba4\JS-Pizza-master\JS-Pizza-master\Frontend\www\assets\images\size-icon.svg" class="imgSize">30</div>
+                            <div class="weight"><img src="C:\Users\senat\Desktop\html\Laba4\JS-Pizza-master\JS-Pizza-master\Frontend\www\assets\images\weight.svg" class="imgWeight">370</div>
+                            <div class="price-primary">99</div>
+                            <div class="grn">грн.</div>   
+                            <div href="#" class="btnbtn-primary">Купити</div>
+                        </div>
+        
+                        <div class="secondColumn">
+                            <div class="size"><img src="C:\Users\senat\Desktop\html\Laba4\JS-Pizza-master\JS-Pizza-master\Frontend\www\assets\images\size-icon.svg" class="imgSize">40</div>
+                            <div class="weight"><img src="C:\Users\senat\Desktop\html\Laba4\JS-Pizza-master\JS-Pizza-master\Frontend\www\assets\images\weight.svg" class="imgWeight">660</div>
+                                <div class="price-default">169</div>
+                                <div class="grn">грн.</div>
+                                <div href="#" class="btnbtn-default">Купити</div>
+                        </div> 
+
+                    </div>
+                </div>
+            </div>
+
+
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail pizza-card">
+                <img src="assets/images/pizza_8.jpg">
+
+                <div class="caption"><h3 class="title">Дольче Маре</h3>
+                    <h6 class="greyType">Піца з морепродуктами</h6>
+                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+
+                    <div class="firstColumn">
+                        <div class="size"><img src="C:\Users\senat\Desktop\html\Laba4\JS-Pizza-master\JS-Pizza-master\Frontend\www\assets\images\size-icon.svg" class="imgSize">30</div>
+                        <div class="weight"><img src="C:\Users\senat\Desktop\html\Laba4\JS-Pizza-master\JS-Pizza-master\Frontend\www\assets\images\weight.svg" class="imgWeight">370</div>
+                        <div class="price-primary">99</div>
+                        <div class="grn">грн.</div>   
+                        <div href="#" class="btnbtn-primary">Купити</div>
+                    </div>
+    
+                    <div class="secondColumn">
+                        <div class="size"><img src="C:\Users\senat\Desktop\html\Laba4\JS-Pizza-master\JS-Pizza-master\Frontend\www\assets\images\size-icon.svg" class="imgSize">40</div>
+                        <div class="weight"><img src="C:\Users\senat\Desktop\html\Laba4\JS-Pizza-master\JS-Pizza-master\Frontend\www\assets\images\weight.svg" class="imgWeight">660</div>
+                            <div class="price-default">169</div>
+                            <div class="grn">грн.</div>
+                            <div href="#" class="btnbtn-default">Купити</div>
+                    </div> 
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail pizza-card">
+                <img src="assets/images/pizza_9.jpg">
+
+                <div class="caption"><h3 class="title">Thumbnail label</h3>
+                    <h6 class="greyType">Піца з морепродуктами</h6>
+                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+
+                    <div class="firstColumn">
+                        <div class="size"><img src="C:\Users\senat\Desktop\html\Laba4\JS-Pizza-master\JS-Pizza-master\Frontend\www\assets\images\size-icon.svg" class="imgSize">30</div>
+                        <div class="weight"><img src="C:\Users\senat\Desktop\html\Laba4\JS-Pizza-master\JS-Pizza-master\Frontend\www\assets\images\weight.svg" class="imgWeight">370</div>
+                        <div class="price-primary">99</div>
+                        <div class="grn">грн.</div>   
+                        <div href="#" class="btnbtn-primary">Купити</div>
+                    </div>
+    
+                    <div class="secondColumn">
+                        <div class="size"><img src="C:\Users\senat\Desktop\html\Laba4\JS-Pizza-master\JS-Pizza-master\Frontend\www\assets\images\size-icon.svg" class="imgSize">40</div>
+                        <div class="weight"><img src="C:\Users\senat\Desktop\html\Laba4\JS-Pizza-master\JS-Pizza-master\Frontend\www\assets\images\weight.svg" class="imgWeight">660</div>
+                            <div class="price-default">169</div>
+                            <div class="grn">грн.</div>
+                            <div href="#" class="btnbtn-default">Купити</div>
+                    </div> 
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="bottomFlagDiscount">
+        <img src="C:\Users\senat\Desktop\html\Laba4\JS-Pizza-master\JS-Pizza-master\Frontend\www\assets\images\discount.svg" class="flagBottom">
+              <p class="this">ЦЬОГО</p>
+              <p class="week">ТИЖНЯ</p>
+              <p class="forAll">НА ВСЕ</p>
+              <p class="discount">-20%</p>
+    </div>
+    
+</footer>
+
+<!-- jQuery JavaScript -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"> </script>
+
+<!--Bootsrap JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!--Own JavaScript -->
+<!--<script type="text/javascript"  src="assets/js/main.js"> </script>-->
+    <style type="text/css">
+       
+    </style>
+
+</body>
+
+</html>
