@@ -1,27 +1,261 @@
 .pizza-card img {
   max-width: 250px;
 }
-body {
+#body {
   background-color: #f7f6e9;
 }
-.header {
+.ingredients {
+  font-size: 15px;
+}
+.greyType {
+  color: grey;
+}
+.piza {
+  margin-left: -27px;
+}
+#sidePanel {
+  display: block;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  position: fixed;
+  background-color: #ebe4e4;
+}
+.label {
+  align-items: center;
+}
+#topDiv {
+  position: fixed;
+  height: 10.3%;
+  width: inherit;
+  top: 0;
+  right: 0;
+  background-color: #edebeb;
+}
+.zamovRow {
+  display: block;
+  position: absolute;
+  top: 20%;
+  align-items: center;
+  width: 100%;
+}
+.zamov {
+  font-size: 16px;
+  font-weight: bold;
+}
+.zamovAndAmount {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 0.5833em 0.833em;
+}
+.amountZamov {
+  justify-content: space-around;
+  display: inline-flex;
+  text-align: center;
+  font-weight: bold;
+  box-sizing: inherit;
+  background-color: #f29d1d;
+  color: white;
+  height: 18px;
+  width: 18px;
+  line-height: 18px;
+  font-size: 10px;
+  border-radius: 55%;
+}
+.cleanZamov {
+  position: absolute;
+  top: 37%;
+  right: 15px;
+  font-size: 9px;
+}
+#bottomDiv {
+  position: fixed;
+  height: 100px;
+  width: inherit;
+  bottom: 0;
+  right: 0;
+  background-color: #edebeb;
+}
+.sumazamovRow {
+  display: flex;
+  align-items: center;
+  padding: 7px;
+}
+.sumaZamov {
+  font-size: 15px;
+  font-weight: bold;
+  width: 60%;
+}
+.priceZam {
+  position: absolute;
+  right: 0;
+  width: 30%;
+  font-size: 15px;
+  font-weight: bold;
+}
+.zamovutu {
+  position: absolute;
+  display: block;
+  border: none;
+  border-radius: 5px;
+  height: auto;
+  width: 80%;
+  padding: 5px;
+  margin-left: 30px;
+  color: white;
+  font-size: 15px;
+  background-color: #f0ab35;
+}
+.middleDiv {
+  position: fixed;
+  width: inherit;
+  height: calc(100% - 170px);
+  top: 70.15px;
+  right: 0;
+  background-color: white;
+}
+#somePizza {
+  position: fixed;
+  width: inherit;
+  height: 25,1%;
+  top: 70.53px;
+  right: 0;
+  border-bottom: 1px solid #dedede;
+}
+#somePizza2 {
+  position: fixed;
+  width: inherit;
+  height: 25,1%;
+  top: 185.57px;
+  right: 0;
+  border-bottom: 1px solid #dedede;
+}
+#somePizza3 {
+  position: fixed;
+  width: inherit;
+  height: 25,1%;
+  top: 300.61px;
+  right: 0;
+  border-bottom: 1px solid #dedede;
+}
+#somePizzaName {
+  color: #e86813;
+  font-size: 19px;
+  margin: 10px;
+  margin-left: 17px;
+}
+#somePizzaSize {
+  margin-left: 17px;
+}
+#somePizzaWeight {
+  margin-left: 10px;
+}
+#somePizzaPrice {
+  display: inline-block;
+  padding-right: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-left: 17px;
+  font-size: 13px;
+  font-weight: bold;
+}
+.minus {
+  padding-bottom: 6px;
+  display: inline-block;
+  align-items: center;
+  text-align: center;
+  vertical-align: middle;
+  box-sizing: inherit;
+  background-color: #e34739;
+  color: white;
+  height: 27px;
+  width: 27px;
+  line-height: 1px;
+  border-radius: 50%;
+  border: none;
+  font-size: 21px;
+  font-weight: bold;
+  text-shadow: 0px -1px 1px #8a1106;
+}
+.iconMinus {
+  font-size: 25px;
+  font-style: normal;
+}
+.plus {
+  padding-bottom: 6px;
+  display: inline-block;
+  align-items: center;
+  text-align: center;
+  vertical-align: middle;
+  box-sizing: inherit;
+  background-color: #4ca110;
+  color: white;
+  height: 27px;
+  width: 27px;
+  line-height: 3px;
+  border-radius: 50%;
+  border: none;
+  font-size: 21px;
+  font-weight: bold;
+  text-shadow: 2px -1px 1px #419109;
+}
+#counterBetweenIcons {
+  font-size: 14px;
+  font-weight: bold;
+  padding: 8px;
+}
+.priceCounter {
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+.cross {
+  padding-bottom: 6px;
+  display: inline-block;
+  align-items: center;
+  text-align: center;
+  vertical-align: middle;
+  box-sizing: inherit;
+  background-image: linear-gradient(#f5f5f5, #dbdbdb);
+  color: #f0ab35;
+  height: 27px;
+  width: 27px;
+  line-height: 3px;
+  border-radius: 50%;
+  border: none;
+  font-size: 17px;
+  font-weight: bold;
+  border: 1px solid #c2c0c0;
+  margin-left: 5%;
+}
+#somePizzaImg {
+  position: absolute;
+  top: -163px;
+  right: -230px;
+  transform: scale(0.25);
+  float: left;
+  overflow: hidden;
+  border-style: solid;
+}
+#header {
   position: fixed;
   z-index: 1;
-  width: 100%;
   height: 70px;
   background-color: black;
   opacity: 85%;
+}
+.myPizzaList {
+  margin-top: 70px;
 }
 .pizzaKMAFlag {
   display: block;
   float: left;
   height: 75px;
   width: 30px;
-  margin-left: 10px;
+  margin-left: -6px;
 }
 .flagTop {
   height: 200px;
-  width: 100px;
+  width: 90px;
   position: relative;
   transform: rotate(180deg);
   filter: brightness(100%);
@@ -37,18 +271,18 @@ body {
 }
 .pizza {
   top: 15px;
-  left: 47px;
+  left: 45px;
   font-size: 16px;
 }
 .KMA {
   top: 38px;
-  left: 45px;
+  left: 41px;
   font-size: 24px;
 }
 .firstLine {
+  width: calc(100% - 155px);
   height: 40%;
-  width: 88%;
-  margin-left: 150px;
+  margin-left: 120px;
   margin-top: 7px;
   position: absolute;
   color: #acadac;
@@ -70,10 +304,12 @@ body {
   margin-bottom: 15px;
 }
 .signIn {
-  float: right;
+  position: absolute;
+  right: 0;
   width: 60px;
-  height: 30px;
-  padding: 5px;
+  height: 28px;
+  margin-top: -5px;
+  padding: 3px;
   background-color: #f0ab35;
   color: white;
   border-radius: 5px;
@@ -81,7 +317,7 @@ body {
 }
 .secondLine {
   height: 40%;
-  width: 88%;
+  width: 93%;
   margin-left: 150px;
   margin-top: 43px;
   color: white;
@@ -89,27 +325,36 @@ body {
 .afterHeader {
   display: block;
   text-align: center;
-  flex-wrap: nowrap;
-  margin-top: 85px;
+  margin-top: 5px;
   margin-bottom: 40px;
 }
 .allPizzas {
   font-size: 25px;
+  font-weight: bold;
   display: block;
+  align-items: center;
+  width: 100%;
+}
+.allPizzas2 {
+  display: inline-block;
   box-sizing: border-box;
 }
 .row {
   margin-top: 100px;
 }
+.textCaption {
+  height: 150px;
+  max-height: 150px;
+  margin-bottom: -20px;
+}
 .amountOfPizzas {
   justify-content: space-around;
   display: inline-flex;
-  margin: 10px;
   text-align: center;
+  font-weight: bold;
   box-sizing: inherit;
   background-color: #f29d1d;
   color: white;
-  margin-left: 2px;
   height: 18px;
   width: 18px;
   line-height: 18px;
@@ -124,6 +369,11 @@ body {
 .type {
   background-color: #f7f6e9;
   border: none;
+}
+.type:focus {
+  color: white;
+  background-color: #f29d1d;
+  border-radius: 3px;
 }
 .footer {
   position: fixed;
@@ -142,7 +392,7 @@ body {
 }
 .flagBottom {
   height: 200px;
-  width: 110px;
+  width: 90px;
   position: relative;
   filter: brightness(100%);
   -webkit-filter: contrast(200%);
@@ -160,34 +410,34 @@ body {
 }
 .this {
   bottom: 50px;
-  left: 47px;
+  left: 38px;
 }
 .week {
   bottom: 32px;
-  left: 45px;
+  left: 38px;
 }
 .forAll {
   bottom: 15px;
-  left: 45px;
+  left: 40px;
 }
 .discount {
   bottom: -7px;
-  left: 55px;
+  left: 45px;
 }
-.popularPizza {
+#pop {
   display: block;
-  /*padding: 5px;*/
-  float: right;
   background-color: green;
   color: white;
 }
 .title {
-  color: #e86813;
   font-weight: bold;
+  font-size: 24px;
+  color: #e86813;
 }
 .btnbtn-primary,
 .btnbtn-default {
-  width: 50%;
+  max-width: 100%;
+  width: 70px;
   display: inline-block;
   padding: 7px;
   color: white;
@@ -208,24 +458,26 @@ body {
 .firstColumn {
   display: inline-block;
   text-align: center;
-  width: 49%;
+  width: 45%;
 }
 .secondColumn {
   display: inline-block;
   text-align: center;
-  width: 49%;
+  width: 45%;
+}
+.columns {
+  display: flex;
+  justify-content: space-around;
 }
 .imgSize,
 .imgWeight {
   margin-right: 5px;
 }
-[data-new]::after {
-  content: attr(data-new);
+#New {
   position: absolute;
   width: 80px;
   bottom: 98%;
   right: 0;
-  background: red;
   border-radius: 5%;
   color: white;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
@@ -237,8 +489,7 @@ body {
   height: 20px;
   box-sizing: border-box;
 }
-[data-popular]::after {
-  content: attr(data-popular);
+#pop {
   position: absolute;
   width: 100px;
   bottom: 98%;
@@ -255,4 +506,30 @@ body {
   padding-top: 3px;
   height: 20px;
   box-sizing: border-box;
+}
+@media (max-width: 900px) {
+  .freeDelivery {
+    display: none;
+  }
+}
+@media (max-width: 769px) {
+  #header {
+    margin-top: -70px;
+  }
+  .twenty47 {
+    display: none;
+  }
+  .piza {
+    display: none;
+  }
+}
+@media (max-width: 992px) {
+  .freeDelivery {
+    display: none;
+  }
+}
+@media (max-width: 717px) {
+  .number {
+    display: none;
+  }
 }

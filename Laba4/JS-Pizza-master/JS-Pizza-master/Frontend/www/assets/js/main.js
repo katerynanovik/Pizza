@@ -1,10 +1,9 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-/**
- * Created by diana on 12.01.16.
- */
+
 
 var pizza_info = [
     {
+        has_small:true,has_big:true,
         id:1,
         icon:'assets/images/pizza_7.jpg',
         title: "Імпреза",
@@ -31,6 +30,7 @@ var pizza_info = [
 
     },
     {
+      has_small:true,has_big:true,
         id:2,
         icon:'assets/images/pizza_2.jpg',
         title: "BBQ",
@@ -54,6 +54,7 @@ var pizza_info = [
         is_popular:true
     },
     {
+      has_small:true,has_big:true,
         id:3,
         icon:'assets/images/pizza_1.jpg',
         title: "Міксовий поло",
@@ -76,6 +77,7 @@ var pizza_info = [
         }
     },
     {
+      has_small:true,has_big:true,
         id:4,
         icon:'assets/images/pizza_5.jpg',
         title: "Сициліано",
@@ -98,6 +100,7 @@ var pizza_info = [
         }
     },
     {
+      has_small:true,has_big:false,
         id:17,
         icon:'assets/images/pizza_3.jpg',
         title: "Маргарита",
@@ -114,6 +117,7 @@ var pizza_info = [
         }
     },
     {
+      has_small:true,has_big:true,
         id:43,
         icon:'assets/images/pizza_6.jpg',
         title: "Мікс смаків",
@@ -137,6 +141,7 @@ var pizza_info = [
         }
     },
     {
+      has_small:false,has_big:true,
         id:90,
         icon:'assets/images/pizza_8.jpg',
         title: "Дольче Маре",
@@ -153,6 +158,7 @@ var pizza_info = [
         }
     },
     {
+      has_small:true,has_big:true,
         id:6,
         icon:'assets/images/pizza_4.jpg',
         title: "Россо Густо",
@@ -184,7 +190,7 @@ module.exports = pizza_info;
 var ejs = require('ejs');
 
 
-exports.PizzaMenu_OneItem = ejs.compile("<%\n\nfunction getIngredientsArray(pizza) {\n    //Отримує вміст піци\n    var content = pizza.content;\n    var result = [];\n\n    //Object.keys повертає масив ключів в об’єкті JavaScript\n\n    Object.keys(content).forEach(function(key){\n\n        //a.concat(b) створює спільний масив із масивів a та b\n        result = result.concat(content[key]);\n    });\n\n    return result;\n}\n\n   %>\n<div class=\"col-md-6 col-lg-4 pizza-card\">\n    <div class=\"thumbnail\">\n        <img class=\"pizza-icon\" src=\"<%= pizza.icon %>\" alt=\"Pizza\">\n\n        <% if(pizza.is_new) { %>\n        <span class=\"label label-danger\">Нова</span>\n        <% } else if(pizza.is_popular) {%>\n        <span class=\"label label-success\">Популярна</span>\n        <% } %>\n\n        <div class=\"caption\">\n            <span class=\"title\"><%= pizza.title %></span>\n            <div class=\"type\"><%= pizza.type %></div>\n            <div class=\"description\">\n                <%= getIngredientsArray(pizza).join(\", \") %>\n            </div>\n        </div>\n\n        <!-- Перед тим щоб показати кнопку необхідно переконатися, що піца має великий розмір -->\n        <button class=\"btn btn-primary buy-big\">Купити велику</button>\n    </div>\n</div>");
+exports.PizzaMenu_OneItem = ejs.compile('<%\n\nfunction getIngredientsArray(pizza) {\n    //Отримує вміст піци\n    var content = pizza.content;\n    var result = [];\n\n    //Object.keys повертає масив ключів в об’єкті JavaScript\n\n    Object.keys(content).forEach(function(key){\n\n        //a.concat(b) створює спільний масив із масивів a та b\n        result = result.concat(content[key]);\n    });\n\n    return result;\n}\n\n   %>\n<div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">\n<div class="thumbnail pizza-card">\n<img src="<%= pizza.icon %>">\n\n<div class="caption"><h3 class="title"><% if(pizza.is_new) { %><span id="New"  class="New label label-danger">Нова</span><% } else if(pizza.is_popular) {%><span id="pop" class="pop label label-success">Популярна</span><% } %><%= pizza.title %></h3>\n<div class="textCaption"><h6 class="greyType"><%= pizza.type %></h6>\n<p class="ingredients"> <%= getIngredientsArray(pizza).join(", ") %></p></div>\n<div class="columns">\n<% if(pizza.has_small) { %>  <div class="firstColumn">\n<div class="size"><img src="assets/images/size-icon.svg" class="imgSize"><%=pizza.small_size.size %></div>\n<div class="weight"><img src="assets/images/weight.svg" class="imgWeight"><%=pizza.small_size.weight %></div>\n<div class="price-primary"><%=pizza.small_size.price%></div>\n<div class="grn">грн.</div>\n<div href="#" class="btnbtn-primary">Купити</div>\n</div> <% } %>\n<% if(pizza.has_big) { %>  <div class="secondColumn">\n<div class="size"><img src="assets/images/size-icon.svg" class="imgSize"><%=pizza.big_size.size %></div>\n<div class="weight"><img src="assets/images/weight.svg" class="imgWeight"><%=pizza.big_size.weight %></div>\n<div class="price-primary"><%=pizza.big_size.price%></div>\n<div class="grn">грн.</div>\n<div href="#" class="btnbtn-primary">Купити</div>\n</div> <% } %>\n\n</div></div>\n</div>\n</div>');
 
 exports.PizzaCart_OneItem = ejs.compile("<div>\n    <%= pizza.title %> (<%= size %>)\n    <div>Ціна: <%= pizza[size].price %> грн.</div>\n    <div>\n        <button class=\"btn btn-danger minus\">-</button>\n        <span class=\"label label-default\"><%= quantity %></span>\n        <button class=\"btn btn-success plus\">+</button>\n    </div>\n</div>");
 
