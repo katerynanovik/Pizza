@@ -1,0 +1,29 @@
+<%
+
+function getIngredientsArray(pizza) {
+    //Отримує вміст піци
+    var content = pizza.content;
+    var result = [];
+
+    //Object.keys повертає масив ключів в об’єкті JavaScript
+
+    Object.keys(content).forEach(function(key){
+
+        //a.concat(b) створює спільний масив із масивів a та b
+        result = result.concat(content[key]);
+    });
+
+    return result;
+}
+
+   %>
+
+
+<div class="col-sm-6 col-md-4">\n<div class="thumbnail pizza-card">\n<img src="<%= pizza.icon %>">\n\n<div class="caption"><h3 class="title"><%= pizza.title %></h3>\n<h6 class="greyType"><%= pizza.type %></h6>\n<p> <%= getIngredientsArray(pizza).join(", ") %></p>\n\n<div class="firstColumn">\n<div class="size"><img src="C:\Users\senat\Desktop\html\Laba4\JS-Pizza-master\JS-Pizza-master\Frontend\www\assets\images\size-icon.svg" class="imgSize">30</div>\n<div class="weight"><img src="C:\Users\senat\Desktop\html\Laba4\JS-Pizza-master\JS-Pizza-master\Frontend\www\assets\images\weight.svg" class="imgWeight">370</div>\n<div class="price-primary">99</div>\n<div class="grn">грн.</div>\n<div href="#" id="small" class="btnbtn-primary">Купити</div>\n</div>\n\n<div class="secondColumn">\n<div class="size"><img src="C:\Users\senat\Desktop\html\Laba4\JS-Pizza-master\JS-Pizza-master\Frontend\www\assets\images\size-icon.svg" class="imgSize">40</div>\n<div class="weight"><img src="C:\Users\senat\Desktop\html\Laba4\JS-Pizza-master\JS-Pizza-master\Frontend\www\assets\images\weight.svg" class="imgWeight">660</div>\n<div class="price-default">169</div>\n<div class="grn">грн.</div>\n<div href="#" id="big"  class="btnbtn-default">Купити</div>\n</div>\n\n</div>\n</div>\n</div>
+
+<% if(pizza.has_small) { %>  <div class="firstColumn">\n<div class="size"><img src="assets/images/size-icon.svg" class="imgSize"><%=pizza.small_size.size %></div>/n<div class="weight"><img src="assets/images/weight.svg" class="imgWeight"><%=pizza.small_size.weight %></div>/n<div class="price-primary"><%=pizza.small_size.price%></div>/n<div class="grn">грн.</div>/n<div href="#" class="btnbtn-primary">Купити</div>/n</div> <% } %>
+
+
+<% if(pizza.has_big) { %>  <div class="secondColumn">\n<div class="size"><img src="assets/images/size-icon.svg" class="imgSize"><%=pizza.big_size.size %></div>/n<div class="weight"><img src="assets/images/weight.svg" class="imgWeight"><%=pizza.big_size.weight %></div>/n<div class="price-primary"><%=pizza.big_size.price%></div>/n<div class="grn">грн.</div>\n<div href="#" class="btnbtn-primary">Купити</div>/n</div> <% } %>
+
+<div id="somePizza">\n<p id="somePizzaName"><%= pizza.title %> (<%= size %>)</p>\n<span class="size" id="somePizzaSize"><img src="assets\images\size-icon.svg" class="imgSize"><%= pizza[size].size %></span>\n<span class="weight" id="somePizzaWeight"><img src="assets\images\weight.svg" class="imgWeight"><%=pizza[size].weight %></span>\n<div class="priceCounter">\n<span class="price" id="somePizzaPrice">Ціна: <%= pizza[size].price %> грн.</span>\n<button class="minus"><i class="iconMinus">-</i></button>\n<span id="counterBetweenIcons" id={{idAmount}}><%= quantity %></span>\n<button class="plus">+</button>\n<button class="cross">x</button>\n</div>\n<img src="assets/images/pizza_2.jpg" id="somePizzaImg">\n</div>
