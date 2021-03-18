@@ -26,7 +26,7 @@
  
    
 
-        <div class="col-xl-9 col-lg-8 col-md-8 col-sm-6 col-6" id="header">
+        <div class="col-xl-9.5 col-lg-9 col-md-8 col-sm-6 col-6" id="header">
 
             <div class= "pizzaKMAFlag">
               <img src="C:\Users\senat\Desktop\html\Laba4\JS-Pizza-master\JS-Pizza-master\Frontend\www\assets\images\discount.svg" class="flagTop">
@@ -50,17 +50,17 @@
    
 
 
-    <div class="col-xl-9 col-lg-8 col-md-8 col-sm-6 col-6 myPizzaList">
+    <div class="col-xl-9.5 col-lg-9 col-md-8 col-sm-6 col-6 myPizzaList">
         <div class="container">
     <div class="afterHeader">
-        <div class="allPizzas"><span>Усі піци</span><span class="amountOfPizzas">8</span></div>
+        <div class="allPizzas"><div class="allPizzas2"><span>Усі піци</span><span class="amountOfPizzas">8</span></div></div>
         <div class="typesOfPizzas">
-            <button class="type">Усі</button>
-            <button class="type">М'ясні</button>
-            <button class="type">З ананасами</button>
-            <button class="type">З грибами</button>
-            <button class="type">З морепродуктами</button>
-            <button class="type">Вега</button>
+            <button class="type" id="1">Усі</button>
+            <button class="type" id="2">М'ясні</button>
+            <button class="type" id="3">З ананасами</button>
+            <button class="type" id="4">З грибами</button>
+            <button class="type" id="5">З морепродуктами</button>
+            <button class="type" id="6">Вега</button>
         </div>
     </div>
 
@@ -72,7 +72,7 @@
         <div class="thumbnail pizza-card">
             <img src="assets/images/pizza_7.jpg">
 
-            <div class="caption"><h3 class="title" data-new='Нова'>Імпреза</h3>
+            <div class="caption"><h3 id="title" data-new='Нова'><span >Імпреза</h3>
                 <h6 class="greyType">М'ясна піца</h6>
                 <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
                 
@@ -103,7 +103,7 @@
             <div class="thumbnail pizza-card">                
                 <img src="assets/images/pizza_2.jpg">
 
-                <div class="caption"><h3 class="title" data-popular='Популярна'>BBQ</h3>
+                <div class="caption"><h3 id="title" data-popular='Популярна'>BBQ</h3>
                     <h6 class="greyType">М'ясна піца</h6>
                     <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
 
@@ -242,6 +242,8 @@
                 </div>
             </div>
         </div>
+
+
             <div class="col-sm-6 col-md-4">
                 <div class="thumbnail pizza-card">
                     <img src="assets/images/pizza_1.jpg">
@@ -339,14 +341,79 @@
 
 
 
-<div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6" id="sidePanel">
+<div class="col-xl-2.5 col-lg-3 col-md-4 col-sm-6 col-6" id="sidePanel">
        <div id="topDiv">
+            
+        
             <div class="zamovRow">
-                <p1 class="zamov">Замовлення</p1>
-                <span class="amountZamov">3</span>
-                <p4 class="cleanZamov">Очистити замовлення</p4>
+                    <div class="zamovAndAmount">
+                        <p1 class="zamov">Замовлення</p1>
+                        <span class="amountZamov">3</span>
+                    </div>
+                <button class="cleanZamov">Очистити замовлення</button>
             </div>
-       </div> 
+       
+       
+        </div> 
+
+
+       <div class="middleDiv" id="cart">
+        
+        <div id="somePizza">
+
+                        <p id="somePizzaName">BBQ (Мала)</p>
+                        <span class="size" id="somePizzaSize"><img src="C:\Users\senat\Desktop\html\Laba4\JS-Pizza-master\JS-Pizza-master\Frontend\www\assets\images\size-icon.svg" class="imgSize">30</span>
+                        <span class="weight" id="somePizzaWeight"><img src="C:\Users\senat\Desktop\html\Laba4\JS-Pizza-master\JS-Pizza-master\Frontend\www\assets\images\weight.svg" class="imgWeight">460</span>
+                        <div class="priceCounter"> 
+                        <span class="price" id="somePizzaPrice">556грн</span>
+                        <button class="minus"><i class="iconMinus">-</i></button>
+                            <span id="counterBetweenIcons">4</span>
+                        <button class="plus">+</button>     
+                        <button class="cross">x</button>
+                     </div>       
+
+            <img src="assets/images/pizza_2.jpg" id="somePizzaImg">
+
+        </div>
+
+        <div id="somePizza2">
+
+            <p id="somePizzaName">Россо Густо (Мала)</p>
+            <span class="size" id="somePizzaSize"><img src="C:\Users\senat\Desktop\html\Laba4\JS-Pizza-master\JS-Pizza-master\Frontend\www\assets\images\size-icon.svg" class="imgSize">30</span>
+            <span class="weight" id="somePizzaWeight"><img src="C:\Users\senat\Desktop\html\Laba4\JS-Pizza-master\JS-Pizza-master\Frontend\www\assets\images\weight.svg" class="imgWeight">400</span>
+            <div class="priceCounter"> 
+            <span class="price" id="somePizzaPrice">189грн</span>
+            <button class="minus"><i class="iconMinus">-</i></button>
+            <span id="counterBetweenIcons">1</span>
+            <button class="plus">+</button>     
+            <button class="cross">x</button>
+         </div>       
+
+<img src="assets/images/pizza_4.jpg" id="somePizzaImg">
+
+</div>
+
+
+<div id="somePizza3">
+
+    <p id="somePizzaName">Міксовий Поло (Велика)</p>
+    <span class="size" id="somePizzaSize"><img src="C:\Users\senat\Desktop\html\Laba4\JS-Pizza-master\JS-Pizza-master\Frontend\www\assets\images\size-icon.svg" class="imgSize">40</span>
+    <span class="weight" id="somePizzaWeight"><img src="C:\Users\senat\Desktop\html\Laba4\JS-Pizza-master\JS-Pizza-master\Frontend\www\assets\images\weight.svg" class="imgWeight">780</span>
+<div class="priceCounter"> 
+    <span class="price" id="somePizzaPrice">179грн</span>
+    <button class="minus"><i class="iconMinus">-</i></button>
+    <span id="counterBetweenIcons">1</span>
+    <button class="plus">+</button>     
+    <button class="cross">x</button>
+ </div>       
+
+<img src="assets/images/pizza_1.jpg" id="somePizzaImg">
+
+</div>
+
+
+
+       </div>
 
 
        <div id="bottomDiv">
@@ -380,7 +447,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
 <!--Own JavaScript -->
-<!--<script type="text/javascript"  src="assets/js/main.js"> </script>-->
+<script type="text/javascript"  src="assets/js/main.js"> </script>
     <style type="text/css">
        
     </style>
