@@ -106,9 +106,9 @@ $("#exampleInputName1").keyup(function(){
         document.getElementById("submit-order").disabled = false;
 
     } else {
-        $("#name").css("color","red");
-        $("#nameError").text("Здається, ви ввели неправильне ім'я");
-        $("#nameError").css("color","red");
+        $("#name").css("color","orange");
+        $("#nameError").text("введено неправильне ім'я");
+        $("#nameError").css("color","orange");
         document.getElementById("submit-order").disabled = true;
 
 
@@ -117,9 +117,9 @@ $("#exampleInputName1").keyup(function(){
 
 $("#exampleInputPhone1").keyup(function(){
     if (!this.value.match("^([0|\\+[0-9]{1,9})?([7-9][0-9]{9}[0-9])$")){
-        $("#phone").css("color","red");
-        $("#phoneError").text("... Здається, ви ввели неправильний номер телефону");
-        $("#phoneError").css("color","red");
+        $("#phone").css("color","orange");
+        $("#phoneError").text("введено неправильний номер телефону");
+        $("#phoneError").css("color","orange");
 
         document.getElementById("submit-order").disabled = true;
 
@@ -139,9 +139,9 @@ $("#exampleInputAddress1").keyup(function(){
         document.getElementById("submit-order").disabled = false;
 
     } else {
-        $("#address").css("color","red");
-        $("#addressError").text("Ну хоч тут введіть все правильно");
-        $("#addressError").css("color","red");
+        $("#address").css("color","orange");
+        $("#addressError").text("введено неправильну адресу");
+        $("#addressError").css("color","orange");
 
         document.getElementById("submit-order").disabled = true;
     }
